@@ -1,0 +1,24 @@
+Langkah-langkah : 
+1. Buat project baru.
+2. Buka  Xampp, pilih apache dan mysql. Klik Start.
+3. Pilih Vs Code. buka projek Laravel baru. Kemudian  pilih New Terminal ketik dan jalankan composer create-project --prefer-dist laravel/laravel mahasiswa. 
+4. Buka Xampp pilih mysql dan klik admin.  Buat Database di Xampp/ localhostmyadmin dengan nama yang sudah ditentukan.
+5. Kembali ke Vs Code buka bagian .env lalu Ubah File .env untuk nama pengguna, kata sandi, dan Nama DB
+Setelah itu jalankan check aplikasi maka tampilan welcome screen dari Laravel framework terlihat.
+5. Ketik diterninal php artisan serve. Kemudian akan muncul  web tersebut. 
+6. Kemuadian jalankan perintah php artisan make:migration create_mahasiswa_table setelah itu Anda dapat memeriksa migrasi folder database di dalam create_mahasiswa_table.php
+7.Klik dan buka tabel Mahasiswa.
+lalu buat bidang data/jenis baris.
+8. Setelah menambahkan jenis baris. Ketik diterninal php artisan migrate.
+9. Buat Migrasi Buat tabel data. Ketik php artisan make:migration create_mahasiswa_table. Setelah itu Anda dapat memeriksa bagian dalam  migrasi folder database create_mahasiswa_table.php
+10. Setelah itu Semua halaman tampilan melalui Controller. Anda harus menambahkan namespace Model di sini gunakan App\Models\Mahasiswa; Data berasal dari database melalui Model.
+11. Buat Model, model digunakan untuk mendapatkan data dari database. Buat nama Model yaitu Mahasiswa. Ketik php artisan make:model mahasiswa Setelah Model Dibuat tampilannya seperti ini. Kode di dalam Kelas Model (app\Models\) Ubah seperti ini Tambahkan Namespace di atas Aplikasi namespace\Model.
+12.Buat Tampilan Buat Folder di dalam resources-views.
+di dalam folder tampilan buat folder mahasiswa
+Di Laravel Anda telah membuat halaman menggunakan pagename.blade.php
+13. Buat halaman pages
+layout.blade.php, index.blade.php, create.blade.php, edit.blade.php,show.blade.php
+14. Routes
+Halaman dikelola melalui rute. Jika sistem Anda sederhana, Anda dapat menambahkannya dengan rute satu baris terlihat seperti iniAnda harus menambahkan ControllerNameSpace
+Route::resource(‘/contact’, Mahasiswa Controller::class);
+Anda harus menambahkan ControllerNameSpace gunakan App\Http\Controllers\MahasiswaController;
